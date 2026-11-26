@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nanofibers, Electrospinning &amp; Spray Drying | Pharmaceutical Guide</title>
+  <style>
+:root {
+  --bg: #f4f7fb; --card: #ffffff; --navy: #0f294a; --royal: #1e40af;
+  --teal: #0d9488; --border: #e2e8f0; --text: #0f172a; --muted: #64748b;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.55; }
+.topnav { position: sticky; top: 0; z-index: 900; background: #091d36; border-bottom: 2px solid var(--teal); padding: 0.6rem 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; }
+.nav-brand { color: #fff; font-weight: 800; font-size: 0.96rem; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
+.nav-brand span.tag { background: var(--teal); color: #fff; font-size: 0.72rem; padding: 0.14rem 0.5rem; border-radius: 999px; font-weight: 700; }
+.nav-links { display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; }
+.nav-link { color: #cbd5e1; text-decoration: none; font-size: 0.84rem; font-weight: 600; padding: 0.38rem 0.72rem; border-radius: 7px; transition: 0.15s; }
+.nav-link:hover { background: rgba(255,255,255,0.1); color: #fff; }
+.nav-link.active { background: var(--teal); color: #fff; }
+header.hero { background: linear-gradient(135deg, #0f294a 0%, #1e40af 55%, #0d9488 100%); color: #fff; padding: 2rem 1.5rem; box-shadow: 0 4px 16px rgba(15,41,74,0.16); }
+header.hero h1 { margin: 0 0 0.4rem 0; font-size: 1.75rem; line-height: 1.25; }
+header.hero p { margin: 0; opacity: 0.93; font-size: 0.95rem; max-width: 920px; }
+.container { max-width: 1440px; margin: 0 auto; padding: 1.4rem; }
+.kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 0.95rem; margin-bottom: 1.35rem; }
+.kpi-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 0.95rem 1.15rem; box-shadow: 0 1px 4px rgba(15,23,42,0.04); }
+.kpi-val { font-size: 1.75rem; font-weight: 800; color: var(--navy); line-height: 1.15; }
+.kpi-lbl { font-size: 0.76rem; color: var(--muted); margin-top: 0.22rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; }
+.kpi-sub { font-size: 0.75rem; color: var(--muted); margin-top: 0.18rem; }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem 1.4rem; margin-bottom: 1.25rem; box-shadow: 0 1px 4px rgba(15,23,42,0.04); }
+.card h2 { margin: 0 0 0.75rem 0; color: var(--navy); font-size: 1.22rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.4rem; }
+.card h3 { margin: 1rem 0 0.5rem 0; color: var(--royal); font-size: 1.02rem; }
+.btn { border: none; border-radius: 8px; padding: 0.52rem 0.92rem; font-size: 0.85rem; font-weight: 700; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 0.38rem; }
+.btn-teal { background: var(--teal); color: #fff; }
+.btn-navy { background: var(--navy); color: #fff; }
+.btn-royal { background: var(--royal); color: #fff; }
+.btn-outline { background: #fff; color: var(--navy); border: 1px solid #cbd5e1; }
+.table-wrap { background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow-x: auto; box-shadow: 0 1px 4px rgba(15,23,42,0.04); }
+table { width: 100%; border-collapse: collapse; font-size: 0.86rem; }
+thead th { background: var(--navy); color: #fff; text-align: left; padding: 0.72rem 0.8rem; position: sticky; top: 0; white-space: nowrap; }
+tbody tr { border-bottom: 1px solid var(--border); }
+tbody tr:nth-child(even) { background: #f8fafc; }
+tbody td { padding: 0.68rem 0.8rem; vertical-align: top; }
+.badge { display: inline-block; padding: 0.16rem 0.52rem; border-radius: 999px; font-size: 0.72rem; font-weight: 700; white-space: nowrap; margin: 0.1rem 0.1rem 0 0; }
+.callout { border-radius: 10px; padding: 0.9rem 1.1rem; margin: 0.9rem 0; font-size: 0.88rem; }
+.callout-warn { background: #fffbeb; border-left: 4px solid #d97706; }
+.callout-mint { background: #ecfdf5; border-left: 4px solid #059669; }
+.mini-btn { padding: 0.27rem 0.52rem; border-radius: 6px; font-size: 0.75rem; font-weight: 700; text-decoration: none; text-align: center; white-space: nowrap; display: block; margin-bottom: 0.25rem; }
+.mini-pmc { background: #1d4ed8; color: #fff; }
+.mini-oa { background: var(--teal); color: #fff; }
+.mini-doi { background: #e2e8f0; color: #0f172a; }
+footer.site-footer { margin-top: 2rem; padding: 1.25rem 1.5rem; background: #0f294a; color: #cbd5e1; font-size: 0.82rem; text-align: center; }
+footer.site-footer a { color: #5eead4; text-decoration: none; }
+
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 1rem; }
+    .dl-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 0.9rem; }
+    .chart-box { text-align: center; margin: 1rem 0; }
+    .chart-box img { max-width: 100%; height: auto; border: 1px solid var(--border); border-radius: 10px; background: #fff; padding: 0.4rem; }
+    .chart-cap { font-size: 0.8rem; color: var(--muted); font-style: italic; margin-top: 0.35rem; }
+    .pill-nav { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.9rem 0 0 0; }
+    .pill { background: rgba(255,255,255,0.16); color: #fff; border: 1px solid rgba(255,255,255,0.28); padding: 0.38rem 0.78rem; border-radius: 999px; font-size: 0.82rem; font-weight: 700; text-decoration: none; }
+    .pill:hover { background: rgba(255,255,255,0.26); }
+  </style>
+</head>
+<body>
+  <nav class="topnav"><a class="nav-brand" href="index.html">Nanofibers &amp; Spray Drying <span class="tag">Pharma Research</span></a><div class="nav-links"><a class="nav-link active" href="index.html">Overview & Research Guide</a><a class="nav-link" href="matrix.html">Research Matrix (73)</a><a class="nav-link" href="core.html">Strict Core (73)</a><a class="nav-link" href="catalog.html">Full Catalog (620)</a><a class="nav-link" href="glossary.html">Glossary</a><a class="nav-link" href="index.html#downloads">Downloads (DOCX / XLSX)</a><a class="nav-link" href="https://github.com/alinbussu/nanofibers-spray-drying" target="_blank">Public Website Repo</a></div></nav>
+
+  <header class="hero">
+    <div class="container" style="padding:0;">
+      <h1>Nanofibers, Electrospinning &amp; Spray Drying in Pharmaceutical Technology</h1>
+      <p>Evidence-based synthesis of suitable APIs, fiber-forming compounds, manufacturing techniques, and analytical methods across <strong>620 curated studies</strong> and <strong>73 Core studies</strong> (28 Full-Text Verified).</p>
+      <div class="pill-nav">
+        <a class="pill" href="#apis">1. Suitable APIs</a>
+        <a class="pill" href="#compounds">2. Fiber-Forming Compounds</a>
+        <a class="pill" href="#techniques">3. Techniques</a>
+        <a class="pill" href="#methods">4. Methods &amp; Operating Windows</a>
+        <a class="pill" href="glossary.html">Acronym Glossary</a>
+        <a class="pill" href="#downloads">Word Guides (EN &amp; RO) + Datasets</a>
+        <a class="pill" href="matrix.html" style="background:var(--teal); border-color:var(--teal);">Explore Research Matrix &rarr;</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="kpi-grid">
+      <div class="kpi-card"><div class="kpi-val">620</div><div class="kpi-lbl">Curated Pharma Catalog</div><div class="kpi-sub">Scopus + OpenAlex + Europe PMC + PubMed</div></div>
+      <div class="kpi-card"><div class="kpi-val" style="color:var(--teal);">73</div><div class="kpi-lbl">Strict Core Corpus</div><div class="kpi-sub">22 Title | 42 Exp | 9 Reviews</div></div>
+      <div class="kpi-card"><div class="kpi-val" style="color:var(--royal);">28</div><div class="kpi-lbl">Full-Text Verified</div><div class="kpi-sub">39 Abstract | 6 Metadata Only</div></div>
+      <div class="kpi-card"><div class="kpi-val">288</div><div class="kpi-lbl">Open Access Studies</div><div class="kpi-sub">97 indexed in Europe PMC</div></div>
+    </div>
+
+    <div class="card" id="downloads">
+      <h2>Research Guides (English &amp; Romanian Word) &amp; Datasets</h2>
+      <p style="margin-top:0; color:var(--muted);">Download formatted Microsoft Word guides summarizing suitable APIs, fiber compounds, techniques, and methods, or explore the underlying Excel/CSV datasets and interactive tables.</p>
+      <div class="dl-grid"><div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:0.9rem 1rem; display:flex; flex-direction:column; justify-content:space-between; gap:0.6rem;"><div><span class="badge" style="background:#dbeafe; color:#1e40af;">DOCX &bull; 884 KB</span><div style="font-weight:700; color:var(--navy); margin-top:0.35rem;">Comprehensive Research Guide (English Word)</div><div style="font-size:0.78rem; color:var(--muted); word-break:break-all;">Nanofibers_Spray_Drying_Pharmaceutical_Guide.docx</div></div><a class="btn btn-teal" href="downloads/Nanofibers_Spray_Drying_Pharmaceutical_Guide.docx" download>Download DOCX</a></div><div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:0.9rem 1rem; display:flex; flex-direction:column; justify-content:space-between; gap:0.6rem;"><div><span class="badge" style="background:#dbeafe; color:#1e40af;">DOCX &bull; 883 KB</span><div style="font-weight:700; color:var(--navy); margin-top:0.35rem;">Ghid Complet de Cercetare (Romanian Word)</div><div style="font-size:0.78rem; color:var(--muted); word-break:break-all;">Ghid_Farmaceutic_Nanofibre_Spray_Drying_RO.docx</div></div><a class="btn btn-teal" href="downloads/Ghid_Farmaceutic_Nanofibre_Spray_Drying_RO.docx" download>Download DOCX</a></div><div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:0.9rem 1rem; display:flex; flex-direction:column; justify-content:space-between; gap:0.6rem;"><div><span class="badge" style="background:#dbeafe; color:#1e40af;">XLSX &bull; 194 KB</span><div style="font-weight:700; color:var(--navy); margin-top:0.35rem;">5-Sheet Methods, Materials & Gap Matrix</div><div style="font-size:0.78rem; color:var(--muted); word-break:break-all;">Matrice_Metode_Materiale_Nanofibre_SD.xlsx</div></div><a class="btn btn-navy" href="downloads/Matrice_Metode_Materiale_Nanofibre_SD.xlsx" download>Download XLSX</a></div><div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:0.9rem 1rem; display:flex; flex-direction:column; justify-content:space-between; gap:0.6rem;"><div><span class="badge" style="background:#dbeafe; color:#1e40af;">CSV &bull; 295 KB</span><div style="font-weight:700; color:var(--navy); margin-top:0.35rem;">Methods & Materials Matrix Flat Export</div><div style="font-size:0.78rem; color:var(--muted); word-break:break-all;">Matrice_Metode_Materiale_Nanofibre_SD.csv</div></div><a class="btn btn-outline" href="downloads/Matrice_Metode_Materiale_Nanofibre_SD.csv" download>Download CSV</a></div><div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:0.9rem 1rem; display:flex; flex-direction:column; justify-content:space-between; gap:0.6rem;"><div><span class="badge" style="background:#dbeafe; color:#1e40af;">XLSX &bull; 141 KB</span><div style="font-weight:700; color:var(--navy); margin-top:0.35rem;">Strict Core Selection Workbook (73 Studies)</div><div style="font-size:0.78rem; color:var(--muted); word-break:break-all;">Studii_Strict_Nanofibre_Spray_Drying.xlsx</div></div><a class="btn btn-navy" href="downloads/Studii_Strict_Nanofibre_Spray_Drying.xlsx" download>Download XLSX</a></div><div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:0.9rem 1rem; display:flex; flex-direction:column; justify-content:space-between; gap:0.6rem;"><div><span class="badge" style="background:#dbeafe; color:#1e40af;">CSV &bull; 188 KB</span><div style="font-weight:700; color:var(--navy); margin-top:0.35rem;">Strict Core Selection Flat Export</div><div style="font-size:0.78rem; color:var(--muted); word-break:break-all;">Studii_Strict_Nanofibre_Spray_Drying.csv</div></div><a class="btn btn-outline" href="downloads/Studii_Strict_Nanofibre_Spray_Drying.csv" download>Download CSV</a></div><div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:0.9rem 1rem; display:flex; flex-direction:column; justify-content:space-between; gap:0.6rem;"><div><span class="badge" style="background:#dbeafe; color:#1e40af;">XLSX &bull; 502 KB</span><div style="font-weight:700; color:var(--navy); margin-top:0.35rem;">Full Pharmaceutical Catalog Workbook (620 Studies)</div><div style="font-size:0.78rem; color:var(--muted); word-break:break-all;">Studii_Nanofibre_Spray_Drying.xlsx</div></div><a class="btn btn-navy" href="downloads/Studii_Nanofibre_Spray_Drying.xlsx" download>Download XLSX</a></div><div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:0.9rem 1rem; display:flex; flex-direction:column; justify-content:space-between; gap:0.6rem;"><div><span class="badge" style="background:#dbeafe; color:#1e40af;">CSV &bull; 1.30 MB</span><div style="font-weight:700; color:var(--navy); margin-top:0.35rem;">Full Pharmaceutical Catalog Flat Export</div><div style="font-size:0.78rem; color:var(--muted); word-break:break-all;">Studii_Nanofibre_Spray_Drying.csv</div></div><a class="btn btn-outline" href="downloads/Studii_Nanofibre_Spray_Drying.csv" download>Download CSV</a></div></div>
+      <div style="margin-top:1rem; display:flex; gap:0.65rem; flex-wrap:wrap;">
+        <a class="btn btn-royal" href="matrix.html">Interactive Research Matrix (73)</a>
+        <a class="btn btn-teal" href="core.html">Strict Core Browser (73)</a>
+        <a class="btn btn-navy" href="catalog.html">Full Literature Catalog (620)</a>
+        <a class="btn btn-outline" href="https://docs.google.com/spreadsheets/d/16WKh7ov03Rc0B0ZtUzdrS3XhSrfxNvZvT_F4n-iCVuQ/edit" target="_blank">Google Sheets (3 Live Tabs)</a>
+        <a class="btn btn-outline" href="https://github.com/alinbussu/nanofibers-spray-drying" target="_blank">Public Website Repo</a>
+      </div>
+    </div>
+
+    <div class="card" id="apis">
+      <h2>1. Active Pharmaceutical Ingredients (APIs) Best Suitable</h2>
+      <p>Across the corpus, combining electrospinning (ES) and spray drying (SD) unlocks transformative bioavailability, thermal preservation, and targeted release across six therapeutic cargo classes:</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>API / Cargo Class</th><th>Suitability</th><th>Optimal Route</th><th>Mechanism of Advantage</th><th>Proven Examples (Core IDs)</th></tr></thead>
+          <tbody>
+            <tr><td><strong>BCS Class II / IV Poorly Soluble Small Molecules</strong></td><td><span class="badge" style="background:#dcfce7; color:#166534;">IDEAL (ASD)</span></td><td>Rotary/AC ES for ultrafast dissolution; 2-fluid SD for clinical high-dose ASDs</td><td>Sub-ms solidification prevents crystallization; HPMCAS/PVPVA64 stabilizes supersaturation</td><td>Itraconazole (010, 036, 007), spironolactone (058), ibuprofen (184, 085), carvedilol (007), furosemide (100), simvastatin (429), apalutamide, ivacaftor (072)</td></tr>
+            <tr><td><strong>Proteins, Peptides, Enzymes, VLPs &amp; EVs</strong></td><td><span class="badge" style="background:#dcfce7; color:#166534;">IDEAL</span></td><td>Ambient ES (+ cryo-milling for DPI) or low-T<sub>out</sub> 2-fluid SD + trehalose</td><td>Avoids &gt;70 &deg;C heat and ultrasonic cavitation shear; maintains ~88–100% bioactivity</td><td>Lysozyme (184, 234), &alpha;-chymotrypsin (089), RHDV/gp100 VLPs (130), BMP-2 (241), nisin Z (428), &beta;-galactosidase (007)</td></tr>
+            <tr><td><strong>Live Probiotics &amp; Beneficial Bacteria</strong></td><td><span class="badge" style="background:#dbeafe; color:#1e40af;">HIGH</span></td><td>Trilayer CA/PVA/CA ES, pre-SD shells &rarr; ES, or RS/pectin/CNF SD</td><td>Barrier shields live cells from organic solvents (ES) and lethal T<sub>out</sub> &gt;55 &deg;C (SD)</td><td><em>L. plantarum</em> (125, 211), <em>L. acidophilus</em>, <em>Bifidobacterium</em> (203, 229, 110), <em>E. coli</em> / <em>M. luteus</em> (098)</td></tr>
+            <tr><td><strong>Colon-Targeted &amp; Taste-Masked Drugs</strong></td><td><span class="badge" style="background:#dbeafe; color:#1e40af;">HIGH</span></td><td>SD CNF/pectin or BNC carriers; Hybrid SD EC MPs inside ES HPMC/PEO ODFs</td><td>Neutral-pH BNC/pectin swelling &amp; CNF barrier cut gastric burst; EC masks bitterness</td><td>5-ASA (083, 229, 110, 217), 5-FU &amp; 5-FU-curcumin (425, 450), rupatadine (133), cysteamine (134)</td></tr>
+            <tr><td><strong>Labile Vitamins, Oils &amp; Bioactives</strong></td><td><span class="badge" style="background:#dbeafe; color:#1e40af;">HIGH</span></td><td>CNC/BCNF Pickering SD (oils) or EHD vs SD encapsulation</td><td>Surfactant-free Pickering shell + CNC H-bonding raises thermal T<sub>max</sub> (+43 &deg;C for B12)</td><td>Vitamins B12 (438, 439), E (212, 235), B1/B2/C (039, 245), &beta;-carotene (415), curcumin (432), oat oil (431)</td></tr>
+            <tr><td><strong>Antimicrobial Inorganics &amp; Bone Fillers</strong></td><td><span class="badge" style="background:#ede9fe; color:#5b21b6;">TARGETED</span></td><td>Coaxial ES scaffolds or CNC/chitin SD nano-in-micro carriers</td><td>Nanoscale dispersion prevents agglomeration while minimizing host cytotoxicity</td><td>Ag-Zn nanozeolites (152), Al<sub>2</sub>O<sub>3</sub>/ZnO NPs (395), hydroxyapatite HA1/HA2 (241), Ag + nanolignin (060)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="chart-box">
+        <img src="assets/fig1_api_classes.png" alt="Top APIs and Cargo Classes" />
+        <div class="chart-cap">Figure 1. Ranked distribution of APIs across the 620-study Catalog (A) and Core Cargo Classes by verification depth (B).</div>
+      </div>
+      <div class="callout callout-warn">
+        <strong>Contraindicated / Challenging API Profiles:</strong> High-dose oral APIs (&gt;200–500 mg/tablet) overwhelm low-density ES mats (use high-solids SD + roller compaction, 007/072); ultrasonic SD nozzles halve lysozyme activity (~46.9% vs 87.5% 2-fluid, 184) and T<sub>out</sub> &gt;55 &deg;C kills mesophilic probiotics (211); fast-crystallizing APIs without polymer H-bonding retain 5–7% trace nuclei in dilute SD (058).
+      </div>
+
+      <h3 style="margin-top:1.2rem;">1.4 Recommended Candidate API Avenues for a Research Project</h3>
+      <p>Candidate APIs can target either <strong>proven benchmarks</strong> (to validate solid-state baselines) or <strong>under-explored candidates</strong> matching the exact physicochemical traits proven optimal in the Core corpus (BCS II/IV solubility, low dose &le;50–100 mg, or thermal/enzymatic sensitivity) where 0 Core studies currently exist:</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Research Avenue</th><th>Benchmark vs. High-Novelty Candidate APIs</th><th>Recommended Route &amp; Carrier</th><th>Key Analytical Opportunity</th><th>Lab Feasibility</th></tr></thead>
+          <tbody>
+            <tr><td><strong>1. Oral BCS II/IV ASDs (Head-to-Head ES vs. SD)</strong></td><td><em>Benchmarks:</em> Itraconazole, spironolactone, simvastatin (036, 058, 429).<br><strong>Novel:</strong> Atorvastatin Ca, celecoxib, fenofibrate, meloxicam, felodipine, telmisartan.</td><td>Matched-throughput ES / electroblowing vs. B-290 2-fluid SD in HPMCAS / PVPVA64 / Eudragit E</td><td>Raman PCA/CLS spatial mapping + non-sink supersaturation + ICH Q3C GC</td><td><span class="badge" style="background:#dcfce7; color:#166534;">High</span></td></tr>
+            <tr><td><strong>2. Pediatric / Geriatric Taste-Masked ODFs (Hybrid SD-in-ES)</strong></td><td><em>Benchmarks:</em> Rupatadine (133), donepezil (085).<br><strong>Novel:</strong> Ondansetron HCl, desloratadine, levocetirizine, propranolol HCl, pediatric sildenafil.</td><td>Aqueous 2-fluid SD (Aquacoat ECD / Eudragit E PO) spun in aqueous HPMC/PEO or HPC/PVP ODFs</td><td>Solvent-free masking (&lt;5% salivary burst pH 6.8) + improved ODF tear strength</td><td><span class="badge" style="background:#dcfce7; color:#166534;">High</span></td></tr>
+            <tr><td><strong>3. Colon-Targeted IBD &amp; Synbiotics (Nanocellulose SD)</strong></td><td><em>Benchmarks:</em> 5-ASA (083, 106), 5-FU (403, 425).<br><strong>Novel:</strong> Budesonide, prednisolone, sulfasalazine, azathioprine, methotrexate (&plusmn; <em>L. rhamnosus GG</em>).</td><td>B-290 DoE SD with 20–25% CNF + retrograded starch/pectin or BNC + granulation</td><td>Low-dose steroids (3–9 mg) fit high polymer ratios; SGF &lt;10% &rarr; colonic SCF + flowability</td><td><span class="badge" style="background:#dcfce7; color:#166534;">High</span></td></tr>
+            <tr><td><strong>4. Inhalable Pulmonary DPIs (Biologics &amp; Antibiotics)</strong></td><td><em>Benchmarks:</em> &alpha;-Chymotrypsin (089), lysozyme (184).<br><strong>Novel:</strong> Tobramycin, ciprofloxacin, colistin, budesonide, insulin, DNase I, bacteriophages.</td><td>Ambient ES (PVA/trehalose/leucine) + cryo-milling or cutting vs. low-T<sub>out</sub> 2-fluid SD</td><td>NGI/ACI cascade impactor (MMAD 1–5 &mu;m, FPF &gt;30%) + bioactivity/phage titer</td><td><span class="badge" style="background:#fef3c7; color:#92400e;">Medium</span></td></tr>
+            <tr><td><strong>5. Buccal / Sublingual Mucoadhesive (First-Pass Bypass)</strong></td><td><em>Benchmarks:</em> Furosemide (100), sumatriptan (085).<br><strong>Novel:</strong> Rizatriptan, zolmitriptan, carvedilol, propranolol, lidocaine, melatonin.</td><td>Aqueous ES (HPC:PVP 6:4, HPMC/chitosan/Carbopol) vs. SD mucoadhesive microspheres</td><td>Rapid low-dose (2.5–25 mg) onset; ex vivo porcine buccal Franz permeation &amp; mucoadhesion</td><td><span class="badge" style="background:#dcfce7; color:#166534;">High</span></td></tr>
+            <tr><td><strong>6. Cold-Chain-Free Biologics, Peptides &amp; Vaccines</strong></td><td><em>Benchmarks:</em> VLPs (130), EVs/bevacizumab (237), nisin Z (428).<br><strong>Novel:</strong> Lactoferrin, LL-37 peptides, Fab fragments, mRNA-LNPs.</td><td>Ambient ES (PVP K90 / PVA / HP-&beta;-CD / trehalose) or B-90 HP Nano SD vs. SFD</td><td>3–6 mo ambient stability (25 &deg;C/60% RH), SEC-HPLC/CD integrity &amp; ISO 10993 safety</td><td><span class="badge" style="background:#f1f5f9; color:#475569;">Medium&ndash;Low</span></td></tr>
+            <tr><td><strong>7. Lipophilic Bioactives &amp; Vitamins (Pickering SD)</strong></td><td><em>Benchmarks:</em> Vit E (212), Vit B12 (439), &beta;-carotene (415), oat oil (431).<br><strong>Novel:</strong> Vitamin D3, coenzyme Q10, resveratrol, quercetin, omega-3 EPA/DHA, CBD.</td><td>Surfactant-free Pickering SD with CNC (0.4–0.8%) + MC/tannic acid or 0.2% BCNF</td><td>40–85% loading without Tween/Span; peroxide/TBARS oxidation stability &amp; redispersion</td><td><span class="badge" style="background:#dcfce7; color:#166534;">High</span></td></tr>
+            <tr><td><strong>8. Antimicrobial Wound Dressings &amp; Scaffolds</strong></td><td><em>Benchmarks:</em> Tetracycline (119), nisin Z (428), Ag-Zn (152), BMP-2 (241).<br><strong>Novel:</strong> Mupirocin, levofloxacin, doxycycline, vancomycin, metronidazole, chlorhexidine.</td><td>Crosslinked 1% TOCNF SD microsponges, coaxial PCL/PLA&ndash;gelatin ES, or SD MPs on ES/BNC</td><td>Dual burst + sustained release, MRSA/EUCAST biofilm eradication &amp; MTT safety</td><td><span class="badge" style="background:#dbeafe; color:#1e40af;">High&ndash;Medium</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout" style="background:#ecfdf5; border-left:4px solid #0d9488; color:#134e4a; padding:0.85rem 1rem; border-radius:6px; margin-top:0.85rem;">
+        <strong>Practical University Lab Shortlist (B-290 SD + Monoaxial ES + HPLC/DSC/XRPD):</strong> Top 4 highest-impact, lowest-barrier picks: <strong>(1)</strong> Celecoxib, atorvastatin, or meloxicam (Avenue 1 head-to-head ES vs. SD ASD); <strong>(2)</strong> Ondansetron HCl or cetirizine (Avenue 2 aqueous SD-in-ES taste-masked ODF); <strong>(3)</strong> Budesonide (Avenue 3 colonic CNF/RS-pectin SD); or <strong>(4)</strong> Coenzyme Q10 or vitamin D3 (Avenue 7 surfactant-free CNC Pickering SD).
+      </div>
+    </div>
+
+    <div class="card" id="compounds">
+      <h2>2. Compounds Used to Create the Fibers &amp; Carriers</h2>
+      <p>The literature spans two distinct material paradigms: <strong>(A) Electrospinnable polymers</strong> that form continuous fibers in situ, and <strong>(B) Pre-formed natural/biosynthesized nanocellulose &amp; protein fibrils</strong> consolidated via spray drying.</p>
+      <div class="chart-box">
+        <img src="assets/fig2_fiber_compounds.png" alt="Fiber-Forming Polymers and Nanocelluloses" />
+        <div class="chart-cap">Figure 2. Frequency of fiber-forming polymers, nanocelluloses, and matrix carriers across the 73 Core studies.</div>
+      </div>
+      <div class="grid-2">
+        <div>
+          <h3>A. Electrospinnable Polymers (In-Situ Fibers)</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Polymer Family</th><th>Verified Benchmarks</th></tr></thead>
+              <tbody>
+                <tr><td><strong>PVP / PVPVA64</strong></td><td>40:60 SPIR:PVPVA64 in DCM/EtOH (058); 15% w/v PVP K90 in PBS (130); 15% HPC:PVP 6:4 (100)</td></tr>
+                <tr><td><strong>PVA</strong></td><td>8% w/v EG-40P for &alpha;-Chy (089); 7% w/w core for <em>L. plantarum</em> (125); 5% BC:PVA in TFA (211)</td></tr>
+                <tr><td><strong>HPMCAS / HPMCP</strong></td><td>1:9 to 9:1 IBU:HPMCAS/HP55 (184); clinical vemurafenib/HPMCAS-LF (072); ACES (323)</td></tr>
+                <tr><td><strong>HPMC / HPC &amp; PEO</strong></td><td>6.5% HPMC + 0.5% PEO 2M ODF (133); 0.03–4% PEO spinnability aid in ACES (007)</td></tr>
+                <tr><td><strong>EC / CA &amp; Polyesters</strong></td><td>6% Aquacoat ECD (133); 14% w/w CA barrier (125); 15–20% PLA / 20% PCL core (241)</td></tr>
+                <tr><td><strong>Eudragit &amp; Cyclodextrins</strong></td><td>Eudragit E + itraconazole (036); 240–270 g/h aqueous HP-&beta;-CD / SBE-&beta;-CD (007)</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div>
+          <h3>B. Pre-Formed Nanofibrils, Co-Carriers &amp; Crosslinkers</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Nanofibril / Additive</th><th>Verified Benchmarks</th></tr></thead>
+              <tbody>
+                <tr><td><strong>CNF / TOCNF / NFC</strong></td><td>1% w/v TOCNF (1.5 mmol COOH/g avoids B-290 clogging, 119); 25% CNF in RS/pectin (083)</td></tr>
+                <tr><td><strong>BNC / BCNF</strong></td><td>0.5% w/v BNC + 91 mg/g B12 (439); 0.2% BCNF Pickering VE (212); 1:1 5-FU-curcumin (425)</td></tr>
+                <tr><td><strong>CNC / cCNC &amp; Chitin</strong></td><td>0.06 g CNC/g oat oil (431); 8% NCC/lactose 25:75 (429); 0.5% cCNC+SF (441); 2:1 CN:NL + PEG (060)</td></tr>
+                <tr><td><strong>Amyloid Fibrils (ANF)</strong></td><td>~1 vol% ANF per 10 nm particle size triggers crumpled supraparticles in SD (411, 142)</td></tr>
+                <tr><td><strong>Crosslinkers &amp; Aids</strong></td><td>1:1 bPEI + citric acid (119), 0.31% tannic acid (431), DHT gelatin (428), MeOH &beta;-sheet (441)</td></tr>
+                <tr><td><strong>Solvents &amp; Warnings</strong></td><td>Prefer H<sub>2</sub>O / PBS / Aquacoat; monitor DCM/CHCl<sub>3</sub>/DMF (ICH Q3C); avoid Surelease in ES (133)</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" id="techniques">
+      <h2>3. Manufacturing Techniques &amp; Head-to-Head Engineering Matrix</h2>
+      <div class="grid-2">
+        <div>
+          <h3>Electrospinning / EHD Variants</h3>
+          <ul>
+            <li><strong>Monoaxial &amp; Emulsion ES:</strong> Lab-scale (0.1–1 g/h) preserving &gt;88% protein &amp; VLP activity (089, 130, 006).</li>
+            <li><strong>Coaxial / Triaxial &amp; Trilayer Sandwich:</strong> Sustained 96 h BMP-2 release (241) and 89.8% probiotic encapsulation (125).</li>
+            <li><strong>Industrial Scale-Up ES:</strong> High-speed rotary (40,000 rpm, 70–450 g/h; 058/007), ACES/C-ACES (to 117 g/h; 323/007), electroblowing (036), and multi-needle Fluidnatek LE-500 GMP.</li>
+            <li><strong>Electrospraying:</strong> Particle generation on ES hardware via low polymer entanglement (e.g., HPC:PVP 9:1, 100).</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Spray Drying &amp; Hybrid Architectures</h3>
+          <ul>
+            <li><strong>2-Fluid, 3-Fluid &amp; Nano SD (B-90 HP):</strong> GMP ASD manufacturing (072), porous DPIs (344), and 0.5–1.3 &mu;m submicron spheres (428).</li>
+            <li><strong>Pickering &amp; CNF Co-Spray Drying:</strong> Surfactant-free oil encapsulation (89.1% oat oil, 431) and colonic RS/pectin/CNF microsponges (083).</li>
+            <li><strong>Spray-Freeze-Drying (SFD) &amp; SD 4.0:</strong> Cryo-atomization for tunable release (401) and AI/PAT monitoring (123).</li>
+            <li><strong>Hybrid Workflows:</strong> SD taste-masked microparticles spun into ODFs (133); cryo-milled / mechanically cut ES mats for DPI inhalers (MMAD 2.94–5.9 &mu;m, FPF 26.5–48.4%; 089, 190).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" id="methods">
+      <h2>4. Experimental, Optimization &amp; Analytical Methods Playbook</h2>
+      <p>Comprehensive experimental characterization and validated Design of Experiments (DoE) operating windows across the 28 Full-Text Verified Core studies:</p>
+      <div class="chart-box">
+        <img src="assets/fig3_methods_playbook.png" alt="Characterization and Performance Playbook" />
+        <div class="chart-cap">Figure 3. Physicochemical characterization techniques (A) and pharmaceutical performance/bio-assays (B) across the 73 Core studies.</div>
+      </div>
+      <div class="callout callout-mint">
+        <strong>Analytical Rule of Thumb (ASDs):</strong> Never rely solely on bulk DSC/XRPD, which missed 5–7% trace crystal nuclei in spray-dried SPIR/PVPVA64 (NF-SD-058) and API clustering in electrospun IBU/HPMCP (NF-SD-184). Always combine DSC/XRPD/FTIR with <strong>Confocal Raman PCA/CLS mapping</strong>, BET surface area, non-sink dissolution, sequential GI fluids (pH 1.2 &rarr; 6.8 &rarr; SCF), and headspace GC under ICH Q3C.
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Method Stage</th><th>Proven Protocols &amp; Quantitative Benchmarks</th><th>Reference Core IDs</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Upstream Feed Prep</strong></td><td>Rheology/G''-G' crossover &amp; conductivity check; Ultra-Turrax + 300-bar homogenization (253.9 nm O/W); probe sonication; 16-day starch retrogradation; 1% TOCNF (1.5 mmol/g)</td><td>100, 323, 429, 431, 083, 119</td></tr>
+            <tr><td><strong>ES Operating Windows</strong></td><td>10–40 kV DC (or ACES), 0.1–1.3 mL/h single needle (300–1,200 mL/h rotary/C-ACES), 10–25 cm distance, 20–25 &deg;C ambient &rarr; 90–1,270 nm fibers</td><td>058, 089, 100, 125, 130, 133, 241, 007</td></tr>
+            <tr><td><strong>SD Operating Windows &amp; DoE</strong></td><td>B-290 / B-191 / B-90 HP: T<sub>in</sub> 85–210 &deg;C (25 &deg;C rotary DCM/EtOH), T<sub>out</sub> 70–120 &deg;C; 18-to-46-run DoEs (R<sup>2</sup>=0.71–0.80); yields up to 82%, EE up to 88–95%</td><td>058, 083, 119, 133, 184, 212, 428, 429, 431, 439, 441</td></tr>
+            <tr><td><strong>Downstream Processing</strong></td><td>Cryo-milling / mechanical cutting for DPI; DHT crosslinking (140 &deg;C/48 h, 53.2%); &lt;1 s methanol Silk II &beta;-sheet induction; vacuum drying + compaction</td><td>089, 190, 428, 441, 072</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer"><div>Data &amp; License Attributions: <a href="https://europepmc.org/" target="_blank">Europe PMC</a> &bull; <a href="https://help.openalex.org/" target="_blank">OpenAlex</a> &bull; <a href="https://arxiv.org/help/api/tou" target="_blank">arXiv</a> &bull; <a href="https://dev.elsevier.com/" target="_blank">Elsevier Scopus API</a> &bull; <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank">NCBI PubMed</a> &bull; <a href="https://unpaywall.org/" target="_blank">Unpaywall</a></div><div style="margin-top:0.35rem;"><a href="https://github.com/alinbussu/nanofibers-spray-drying" target="_blank">Public Website Repository</a> &bull; <a href="https://docs.google.com/spreadsheets/d/16WKh7ov03Rc0B0ZtUzdrS3XhSrfxNvZvT_F4n-iCVuQ/edit" target="_blank">Live Google Sheets</a></div></footer>
+</body>
+</html>
